@@ -18,3 +18,18 @@ https://github.com/vim/vim/archive/refs/tags/v9.0.2103.tar.gz
 4. 相同目录再次执行编译窗口gvim命令，`nmake -f Make_mvc.mak GUI=yes`
 5. 现在的源码目录可以用于构建IDE项目，编译的目的是完整生成vim需要的所有文件，部分文件只有编译后才会产生
 
+Make_mvc.mak的编译target是1225行的 all:
+
+579行 VIM = vim, 如果定义了DEBUG宏，那就是605行VIM = vimd
+179行OBJDIR值为ObjC（目录的文件夹名 ObjCAMD64），所以 VIMDLL是空，GUI是空，!if "$(VIMDLL)" == "yes" 这个判断会走到else部分，!叹号不是非，是!if一起表示if语句的意思
+
+
+
+1225  all
+1219  MAIN_TARGET
+1258  $(VIM).exe
+1274  $(OUTDIR)
+
+缺少日志里的 pathdef，encoding.c是 340 TERM_OBJ
+
+634  OBJ
