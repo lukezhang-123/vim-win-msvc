@@ -1,0 +1,7 @@
+# visual studio ide stuff
+.vs
+packages
+x64
+
+# vim compiled binary
+vim-9.0.2103-src/.github
