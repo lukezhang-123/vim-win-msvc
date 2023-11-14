@@ -1,0 +1,14 @@
+
+
+normal.c#normal_cmd()  handle normal command after vim started
+
+normal.c#normal_cmd()#L623
+c = safe_vgetc() wait type command
+
+normal.c#normal_cmd()#L1135  
+ca.arg = nv_cmds[idx].cmd_arg;   find function
+    (nv_cmds[idx].cmd_func)(&ca); execute function
+
+normal.c#nv_cmds[] contain the normal mode command, like i into insert mode etc.
+
+when type : will execute normal.c#nv_colon()

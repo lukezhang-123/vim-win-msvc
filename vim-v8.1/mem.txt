@@ -1,0 +1,35 @@
+java util
+
+edit vs .vcxproj .vcxproj.filters
+
+String str="";
+str=str.replace("\t$(OUTDIR)\\","");
+        str=str.replace("\\\n","");
+
+//        System.out.println(str);
+
+        String[] allfile =str.split(" ");
+        for(String onefile:allfile)
+        {
+//            System.out.println(onefile);
+            String onename = onefile.replace(".obj","");
+            System.out.println(String.format("%s", onename));
+        }
+
+
+get c preprocessor #define variable arguments
+
+String str="";
+String patternString = "-D.*? ";
+
+        Pattern pattern = Pattern.compile(patternString);
+
+        Matcher matcher = pattern.matcher(str);
+
+        Set<String> defines = new HashSet<>();
+        while(matcher.find()) {
+            System.out.println("found: " + matcher.group(0));
+            String one = matcher.group(0);
+            defines.add(one.replace("-D",""));
+        }
+        System.out.println(StringUtils.join(defines,";"));

@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4CF3D18E-58FF-41C8-8181-978EC7A0A869}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gvim</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)vimsrc\src;$(SolutionDir)vimsrc\src\proto;$(SolutionDir)vimsrc\src\libvterm\include;$(SolutionDir)vimsrc\src\xpm\include;$(IncludePath)</IncludePath>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;NDEBUG;WINVER=0x0501;HAVE_STDINT_H;DYNAMIC_DIRECTX;_WIN32_WINNT=0x0501;FEAT_GUI_W32;FEAT_JOB_CHANNEL;FEAT_XPM_W32;DYNAMIC_GETTEXT;IS_COMBINING_FUNCTION=utf_iscomposing_uint;DYNAMIC_ICONV;FEAT_DIRECTX;HAVE_PATHDEF;VSNPRINTF=vim_vsnprintf;FEAT_HUGE;INLINE="";WCWIDTH_FUNCTION=utf_uint2cells;_CRT_SECURE_NO_WARNINGS;FEAT_NETBEANS_INTG;FEAT_CSCOPE;FEAT_TERMINAL;FEAT_DIRECTX_COLOR_EMOJI;WIN32;USE_INLINE;INLINE=inline;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>WSock32.lib;Comctl32.lib;Version.lib;$(SolutionDir)vimsrc\src\xpm\x64\lib-vc14\libXpm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalManifestDependencies>%(AdditionalManifestDependencies)</AdditionalManifestDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\vimsrc\src\arabic.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\arabic.c" />
+    <ClCompile Include="..\vimsrc\src\ObjGXAMD64\pathdef.c" />
+    <ClCompile Include="..\vimsrc\src\xpm_w32.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\beval.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\blowfish.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\buffer.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\channel.c" />
+    <ClCompile Include="..\vimsrc\src\charset.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\crypt.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\crypt_zip.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\dict.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\diff.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\digraph.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\edit.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\eval.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\evalfunc.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\ex_cmds.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\ex_cmds2.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\ex_docmd.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\ex_eval.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\ex_getln.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\farsi.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\fileio.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\fold.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\getchar.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\gui.c" />
+    <ClCompile Include="..\vimsrc\src\gui_beval.c" />
+    <ClCompile Include="..\vimsrc\src\gui_dwrite.cpp" />
+    <ClCompile Include="..\vimsrc\src\gui_w32.c" />
+    <ClCompile Include="..\vimsrc\src\hardcopy.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\hashtab.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\if_cscope.c" />
+    <ClCompile Include="..\vimsrc\src\json.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\libvterm\src\encoding.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)term_encoding</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\vimsrc\src\libvterm\src\keyboard.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)term_keyboard</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\vimsrc\src\libvterm\src\mouse.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)term_mouse</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\vimsrc\src\libvterm\src\parser.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)term_parser</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\vimsrc\src\libvterm\src\pen.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)term_pen</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\vimsrc\src\libvterm\src\screen.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)term_screen</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\vimsrc\src\libvterm\src\state.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)term_state</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\vimsrc\src\libvterm\src\unicode.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)term_unicode</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\vimsrc\src\libvterm\src\vterm.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)term_vterm</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\vimsrc\src\list.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\mark.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\mbyte.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\memfile.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\memline.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\menu.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\message.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\misc1.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\misc2.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\move.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\netbeans.c" />
+    <ClCompile Include="..\vimsrc\src\normal.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\ops.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\option.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\os_mswin.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">-c /W3 /nologo  -I. -Iproto -DHAVE_PATHDEF -DWIN32  -DFEAT_CSCOPE -DFEAT_TERMINAL  -DFEAT_JOB_CHANNEL      -DWINVER=0x0501 -D_WIN32_WINNT=0x0501 /MP -DHAVE_STDINT_H /Ox  -DNDEBUG  /Zl /MT -DDYNAMIC_ICONV -DDYNAMIC_GETTEXT -DFEAT_HUGE  /Zi</AdditionalOptions>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</MinimalRebuild>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</BasicRuntimeChecks>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</BufferSecurityCheck>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\os_w32exe.c" />
+    <ClCompile Include="..\vimsrc\src\terminal.c" />
+    <ClCompile Include="..\vimsrc\src\version.c" />
+    <ClCompile Include="..\vimsrc\src\winclip.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\os_win32.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\popupmnu.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\quickfix.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\regexp.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\screen.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\search.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\sha256.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\spell.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\spellfile.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\syntax.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\tag.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\term.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\ui.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\undo.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\userfunc.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vimsrc\src\window.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="..\vimsrc\src\ObjGXAMD64\vim.res" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
