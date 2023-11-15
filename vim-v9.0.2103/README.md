@@ -36,7 +36,7 @@ makefile中编译vim.exe依赖的组件
 $(OUTDIR)  检查编译目录 507 OUTDIR=$(OBJDIR)  247  OBJDIR = $(OBJDIR)$(CPU)  179  OBJDIR = .\ObjC  234  CPU = AMD64  所以是 ObjCAMD64
 $(OBJ)    634 OBJ = （因为最后一行747行最后是连接符，所以包括下面的if块，755行）
 $(XDIFF_OBJ)   809  XDIFF_OBJ =
-$(GUI_OBJ)   796 GUI_OBJ = ，上下是if块，但是因为没有GUI=yes参数，所以没被执行，GUI_OBJ是空的
+$(GUI_OBJ)   796 空 GUI_OBJ = ，上下是if块，但是因为没有GUI=yes参数，所以没被执行，GUI_OBJ是空的
 $(CUI_OBJ)   805 CUI_OBJ = ，参考$(GUI_OBJ)，在if块的else部分，是两个if块的外层大if的else块部分
 $(OLE_OBJ)   761 空，因为没有OLE=yes参数
 $(OLE_IDL)   762 空
@@ -59,10 +59,23 @@ version.h
 vim项目右键，添加，现有项，选择源码目录的alloc.c
 查看 vim-v9.0.2103.vcxproj 里的添加项，用python脚本批量生成，注意pathdef.c是在编译目录生成的
 
-vim项目右键，属性，VC++目录 —>包含目录
-$(SolutionDir)vimsrc\src; $(SolutionDir)vimsrc\src\proto; $(SolutionDir)vimsrc\src\libvterm\include
+先加 634行的obj（脚本生成后，手动改vs 项目文件）, 755 os_w32exe.c  vim.rc
+pathdef.c
+809 XDIFF_OBJ  xdiff目录下
+805 CUI_OBJ
+340 TERM_OBJ，vterm_encoding 是libvterm/src下的encoding
+465 SOUND_OBJ
+version.c
+
+vim项目右键，属性，c/c++，常规 —>附加包含目录
+$(SolutionDir)vim-9.0.2103-src\src; $(SolutionDir)vim-9.0.2103-src\src\proto; $(SolutionDir)vim-9.0.2103-src\src\libvterm\include
 
 
 vim项目右键，属性，c/c++,预处理器
 NDEBUG ;WINVER=0x0501 ;HAVE_STDINT_H ;_WIN32_WINNT=0x0501 ;_WIN32_WINNT=0x0600 ;FEAT_JOB_CHANNEL ;DYNAMIC_GETTEXT ;IS_COMBINING_FUNCTION=utf_iscomposing_uint ;DYNAMIC_ICONV ;HAVE_PATHDEF ;VSNPRINTF=vim_vsnprintf ;FEAT_HUGE ;INLINE="" ;WCWIDTH_FUNCTION=utf_uint2cells ;_CRT_SECURE_NO_WARNINGS ;USE_DYNFILEID ;FEAT_GETTEXT ;FEAT_CSCOPE ;FEAT_TERMINAL ;WIN32 
+
+vim项目右键，属性，c/c++,预编译头，预编译头--不使用
+
+_DEBUG;%(PreprocessorDefinitions);
+fatal  error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "pch.h"”?
 

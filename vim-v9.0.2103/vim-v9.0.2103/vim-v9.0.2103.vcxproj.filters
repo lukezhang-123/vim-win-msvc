@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\vim-9.0.2103-src\src\alloc.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\arabic.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\arglist.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\autocmd.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\beval.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\blob.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\blowfish.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\buffer.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\bufwrite.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\change.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\charset.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\cindent.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\clientserver.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\clipboard.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\cmdexpand.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\cmdhist.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\crypt.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\crypt_zip.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\debugger.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\dict.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\diff.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\digraph.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\drawline.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\drawscreen.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\edit.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\eval.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\evalbuffer.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\evalfunc.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\evalvars.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\evalwindow.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\ex_cmds.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\ex_cmds2.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\ex_docmd.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\ex_eval.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\ex_getln.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\fileio.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\filepath.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\findfile.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\float.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\fold.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\getchar.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\gui_xim.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\hardcopy.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\hashtab.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\help.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\highlight.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\if_cscope.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\indent.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\insexpand.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\json.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\list.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\locale.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\logfile.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\main.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\map.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\mark.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\match.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\mbyte.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\memfile.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\memline.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\menu.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\message.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\misc1.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\misc2.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\mouse.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\move.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\normal.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\ops.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\option.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\optionstr.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\os_mswin.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\popupmenu.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\popupwin.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\profiler.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\quickfix.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\regexp.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\register.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\scriptfile.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\screen.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\search.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\session.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\sha256.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\sign.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\spell.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\spellfile.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\spellsuggest.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\strings.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\syntax.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\tag.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\term.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\testing.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\textformat.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\textobject.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\textprop.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\time.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\typval.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\ui.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\undo.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\usercmd.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\userfunc.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9class.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9cmds.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9compile.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9execute.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9expr.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9instr.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9script.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9type.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\viminfo.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\winclip.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\window.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\xdiff\xdiffi.c">
+      <Filter>xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\xdiff\xemit.c">
+      <Filter>xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\xdiff\xhistogram.c">
+      <Filter>xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\xdiff\xpatience.c">
+      <Filter>xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\xdiff\xprepare.c">
+      <Filter>xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\xdiff\xutils.c">
+      <Filter>xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\iscygpty.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\terminal.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\encoding.c">
+      <Filter>libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\keyboard.c">
+      <Filter>libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\mouse.c">
+      <Filter>libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\parser.c">
+      <Filter>libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\pen.c">
+      <Filter>libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\screen.c">
+      <Filter>libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\state.c">
+      <Filter>libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\unicode.c">
+      <Filter>libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\vterm.c">
+      <Filter>libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\sound.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\version.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\ObjCAMD64\pathdef.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\os_w32exe.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="PropertySheet.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="xdiff">
+      <UniqueIdentifier>{a93abed5-b4d0-4eeb-b701-0adf3c082b4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libvterm">
+      <UniqueIdentifier>{56a9d831-d4f6-4d0c-b946-6fafda79b273}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\vim-9.0.2103-src\src\vim.rc" />
+  </ItemGroup>
+</Project>
