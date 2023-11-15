@@ -111,3 +111,6 @@ src/cscope.out
 /.cache/clangd/
 /.ccls-cache/
 /compile_commands.json
+
+!src/ObjCAMD64/pathdef.c
+!src/ObjGXAMD64/pathdef.c

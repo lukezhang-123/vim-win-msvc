@@ -21,9 +21,7 @@ https://github.com/vim/vim/archive/refs/tags/v9.0.2103.tar.gz
 Make_mvc.mak的编译target是1225行的 all:
 
 579行 VIM = vim, 如果定义了DEBUG宏，那就是605行VIM = vimd
-179行OBJDIR值为ObjC（目录的文件夹名 ObjCAMD64），所以 VIMDLL是空，GUI是空，!if "$(VIMDLL)" == "yes" 这个判断会走到else部分，!叹号不是非，是!if一起表示if语句的意思
-
-
+179行OBJDIR值为ObjC（目录的文件夹名 ObjCAMD64），所以 VIMDLL是空，GUI是空，!if "$(VIMDLL)" == "yes" 这个判断会走到else部分，!叹号不是非的逻辑判断，在行首表示改行是逻辑代码，后面的有些行!在行首，空格几个再if,else等等可见证
 
 1225  all
 1219  MAIN_TARGET
@@ -33,3 +31,38 @@ Make_mvc.mak的编译target是1225行的 all:
 缺少日志里的 pathdef，encoding.c是 340 TERM_OBJ
 
 634  OBJ
+
+makefile中编译vim.exe依赖的组件
+$(OUTDIR)  检查编译目录 507 OUTDIR=$(OBJDIR)  247  OBJDIR = $(OBJDIR)$(CPU)  179  OBJDIR = .\ObjC  234  CPU = AMD64  所以是 ObjCAMD64
+$(OBJ)    634 OBJ = （因为最后一行747行最后是连接符，所以包括下面的if块，755行）
+$(XDIFF_OBJ)   809  XDIFF_OBJ =
+$(GUI_OBJ)   796 GUI_OBJ = ，上下是if块，但是因为没有GUI=yes参数，所以没被执行，GUI_OBJ是空的
+$(CUI_OBJ)   805 CUI_OBJ = ，参考$(GUI_OBJ)，在if块的else部分，是两个if块的外层大if的else块部分
+$(OLE_OBJ)   761 空，因为没有OLE=yes参数
+$(OLE_IDL)   762 空
+$(MZSCHEME_OBJ)   1022 空，未定义MZSCHEME
+$(LUA_OBJ)   895 空  nmake-vim.log编译日志没有
+$(PERL_OBJ)  1064 空
+$(PYTHON_OBJ)  923 空
+$(PYTHON3_OBJ)  952 空
+$(RUBY_OBJ)   1120 空
+$(TCL_OBJ)    874 空，vim会使用 if_tcl.c这样的组件标志文件
+$(TERM_OBJ)   340
+$(SOUND_OBJ)  465 没定义SOUND=yes,但是编译日志里有sound.c
+$(NETBEANS_OBJ)  415 空
+$(CHANNEL_OBJ)   472 没定义CHANNEL=yes，但是编译日志有channel.c
+$(XPM_OBJ)   456 空
+version.c
+version.h
+
+
+vim项目右键，添加，现有项，选择源码目录的alloc.c
+查看 vim-v9.0.2103.vcxproj 里的添加项，用python脚本批量生成，注意pathdef.c是在编译目录生成的
+
+vim项目右键，属性，VC++目录 —>包含目录
+$(SolutionDir)vimsrc\src; $(SolutionDir)vimsrc\src\proto; $(SolutionDir)vimsrc\src\libvterm\include
+
+
+vim项目右键，属性，c/c++,预处理器
+NDEBUG ;WINVER=0x0501 ;HAVE_STDINT_H ;_WIN32_WINNT=0x0501 ;_WIN32_WINNT=0x0600 ;FEAT_JOB_CHANNEL ;DYNAMIC_GETTEXT ;IS_COMBINING_FUNCTION=utf_iscomposing_uint ;DYNAMIC_ICONV ;HAVE_PATHDEF ;VSNPRINTF=vim_vsnprintf ;FEAT_HUGE ;INLINE="" ;WCWIDTH_FUNCTION=utf_uint2cells ;_CRT_SECURE_NO_WARNINGS ;USE_DYNFILEID ;FEAT_GETTEXT ;FEAT_CSCOPE ;FEAT_TERMINAL ;WIN32 
+
