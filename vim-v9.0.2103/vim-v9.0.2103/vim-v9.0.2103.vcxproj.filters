@@ -163,6 +163,9 @@
     <ClCompile Include="..\vim-9.0.2103-src\src\version.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\ObjCAMD64\pathdef.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\os_w32exe.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\os_win32.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\channel.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\job.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

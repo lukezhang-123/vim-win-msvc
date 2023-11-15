@@ -65,7 +65,11 @@ pathdef.c
 805 CUI_OBJ
 340 TERM_OBJ，vterm_encoding 是libvterm/src下的encoding
 465 SOUND_OBJ
+472 channel job
 version.c
+
+vim项目右键，属性，c/c++，输出文件，对象文件名，$(IntDir)/%(RelativeDir)/
+
 
 vim项目右键，属性，c/c++，常规 —>附加包含目录
 $(SolutionDir)vim-9.0.2103-src\src; $(SolutionDir)vim-9.0.2103-src\src\proto; $(SolutionDir)vim-9.0.2103-src\src\libvterm\include
@@ -73,6 +77,13 @@ $(SolutionDir)vim-9.0.2103-src\src; $(SolutionDir)vim-9.0.2103-src\src\proto; $(
 
 vim项目右键，属性，c/c++,预处理器
 NDEBUG ;WINVER=0x0501 ;HAVE_STDINT_H ;_WIN32_WINNT=0x0501 ;_WIN32_WINNT=0x0600 ;FEAT_JOB_CHANNEL ;DYNAMIC_GETTEXT ;IS_COMBINING_FUNCTION=utf_iscomposing_uint ;DYNAMIC_ICONV ;HAVE_PATHDEF ;VSNPRINTF=vim_vsnprintf ;FEAT_HUGE ;INLINE="" ;WCWIDTH_FUNCTION=utf_uint2cells ;_CRT_SECURE_NO_WARNINGS ;USE_DYNFILEID ;FEAT_GETTEXT ;FEAT_CSCOPE ;FEAT_TERMINAL ;WIN32 
+
+从编译日志提取
+GET_SPECIAL_PTY_TYPE_FUNCTION=get_special_pty_type;HAVE_INET_NTOP;FEAT_SOUND;NDEBUG;WCWIDTH_FUNCTION=utf_uint2cells;HAVE_PATHDEF;FEAT_HUGE;DYNAMIC_GETTEXT;HAVE_STDINT_H;VSNPRINTF=vim_vsnprintf;SNPRINTF=vim_snprintf;INLINE="";DYNAMIC_IME;FEAT_JOB_CHANNEL;IS_COMBINING_FUNCTION=utf_iscomposing_uint;FEAT_CSCOPE;WIN32;_CRT_SECURE_NO_WARNINGS;FEAT_IPV6;DYNAMIC_ICONV;FEAT_TERMINAL;_WIN32_WINNT=0x0601;FEAT_GETTEXT;WINVER=0x0601;FEAT_MBYTE_IME
+
+vim项目右键，属性，c/c++，连接器，输入，附加依赖项
+kernel32.lib;advapi32.lib;shell32.lib;user32.lib;uuid.lib;ole32.lib;comctl32.lib;gdi32.lib;oleaut32.lib;oldnames.lib;comdlg32.lib;netapi32.lib;winmm.lib
+
 
 vim项目右键，属性，c/c++,预编译头，预编译头--不使用
 

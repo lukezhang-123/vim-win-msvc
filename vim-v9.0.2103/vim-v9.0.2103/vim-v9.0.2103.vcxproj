@@ -77,12 +77,17 @@
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>NDEBUG;WINVER=0x0501;HAVE_STDINT_H;_WIN32_WINNT=0x0501;_WIN32_WINNT=0x0600;FEAT_JOB_CHANNEL;DYNAMIC_GETTEXT;IS_COMBINING_FUNCTION=utf_iscomposing_uint;DYNAMIC_ICONV;HAVE_PATHDEF;VSNPRINTF=vim_vsnprintf;FEAT_HUGE;INLINE="";WCWIDTH_FUNCTION=utf_uint2cells;_CRT_SECURE_NO_WARNINGS;USE_DYNFILEID;FEAT_GETTEXT;FEAT_CSCOPE;FEAT_TERMINAL;WIN32</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MSWIN;HAVE_STDINT_H;_WIN32_WINNT=0x0601;FEAT_CSCOPE;HAVE_INET_NTOP;DYNAMIC_IME;IS_COMBINING_FUNCTION=utf_iscomposing_uint;NDEBUG;FEAT_SOUND;FEAT_IPV6;HAVE_PATHDEF;INLINE="";FEAT_GETTEXT;GET_SPECIAL_PTY_TYPE_FUNCTION=get_special_pty_type;WIN32;WCWIDTH_FUNCTION=utf_uint2cells;WINVER=0x0601;FEAT_TERMINAL;FEAT_JOB_CHANNEL;DYNAMIC_GETTEXT;_CRT_SECURE_NO_WARNINGS;VSNPRINTF=vim_vsnprintf;SNPRINTF=vim_snprintf;FEAT_MBYTE_IME;FEAT_HUGE;DYNAMIC_ICONV</PreprocessorDefinitions>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vim-9.0.2103-src\src; $(SolutionDir)vim-9.0.2103-src\src\proto; $(SolutionDir)vim-9.0.2103-src\src\libvterm\include</AdditionalIncludeDirectories>
+      <UndefinePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </UndefinePreprocessorDefinitions>
+      <ModuleOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)</ModuleOutputFile>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/%(RelativeDir)/</ObjectFileName>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(CoreLibraryDependencies);%(AdditionalDependencies);kernel32.lib;advapi32.lib;shell32.lib;user32.lib;uuid.lib;ole32.lib;comctl32.lib;gdi32.lib;oleaut32.lib;oldnames.lib;comdlg32.lib;netapi32.lib;winmm.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Platform)'=='Win32'">
@@ -122,6 +127,7 @@
     <ClCompile Include="..\vim-9.0.2103-src\src\buffer.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\bufwrite.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\change.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\channel.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\charset.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\cindent.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\clientserver.c" />
@@ -162,6 +168,7 @@
     <ClCompile Include="..\vim-9.0.2103-src\src\indent.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\insexpand.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\iscygpty.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\job.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\json.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\encoding.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\keyboard.c" />
@@ -195,6 +202,7 @@
     <ClCompile Include="..\vim-9.0.2103-src\src\optionstr.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\os_mswin.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\os_w32exe.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\os_win32.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\popupmenu.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\popupwin.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\profiler.c" />

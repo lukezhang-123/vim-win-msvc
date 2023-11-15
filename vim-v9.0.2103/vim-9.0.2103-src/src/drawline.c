@@ -762,7 +762,7 @@ text_prop_position(
 
 			// change the last character to '…', converted to the
 			// current 'encoding'
-			STRCPY(buf, "…");
+			//STRCPY(buf, "…");
 			if (!enc_utf8)
 			{
 			    vimconv_T	vc;

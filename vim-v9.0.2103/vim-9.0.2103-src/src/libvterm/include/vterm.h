@@ -58,7 +58,7 @@ typedef struct {
 int vterm_pos_cmp(VTermPos a, VTermPos b);
 
 #if defined(DEFINE_INLINES) || USE_INLINE
-INLINE int vterm_pos_cmp(VTermPos a, VTermPos b)
+ int vterm_pos_cmp(VTermPos a, VTermPos b)
 {
   return (a.row == b.row) ? a.col - b.col : a.row - b.row;
 }
@@ -76,7 +76,7 @@ typedef struct {
 int vterm_rect_contains(VTermRect r, VTermPos p);
 
 #if defined(DEFINE_INLINES) || USE_INLINE
-INLINE int vterm_rect_contains(VTermRect r, VTermPos p)
+ int vterm_rect_contains(VTermRect r, VTermPos p)
 {
   return p.row >= r.start_row && p.row < r.end_row &&
          p.col >= r.start_col && p.col < r.end_col;
@@ -89,7 +89,7 @@ INLINE int vterm_rect_contains(VTermRect r, VTermPos p)
 void vterm_rect_move(VTermRect *rect, int row_delta, int col_delta);
 
 #if defined(DEFINE_INLINES) || USE_INLINE
-INLINE void vterm_rect_move(VTermRect *rect, int row_delta, int col_delta)
+ void vterm_rect_move(VTermRect *rect, int row_delta, int col_delta)
 {
   rect->start_row += row_delta; rect->end_row += row_delta;
   rect->start_col += col_delta; rect->end_col += col_delta;
