@@ -6,4 +6,4 @@ x64
 # vim compiled binary
 vim-9.0.2103-src/.github
 
-
+!vim-9.0.2103-src/src/xpm/*

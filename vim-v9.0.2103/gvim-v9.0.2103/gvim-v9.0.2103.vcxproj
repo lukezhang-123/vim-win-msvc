@@ -95,6 +95,7 @@
     <ClCompile Include="..\vim-9.0.2103-src\src\option.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\optionstr.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\os_mswin.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\os_win32.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\popupmenu.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\popupwin.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\profiler.c" />
@@ -185,7 +186,6 @@
     <ClCompile Include="..\vim-9.0.2103-src\src\version.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\ObjCAMD64\pathdef.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\os_w32exe.c" />
-    <ClCompile Include="..\vim-9.0.2103-src\src\os_win32.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\channel.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\job.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\xpm_w32.c" />
