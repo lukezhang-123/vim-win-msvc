@@ -136,3 +136,8 @@ kernel32.lib;advapi32.lib;shell32.lib;user32.lib;uuid.lib;ole32.lib;comctl32.lib
 
 test01.py  是根据makefile里obj要编译的c文件，110多个，批量生成visual studio工程配置文件，避免手动添加麻烦
 test02.py  是根据编译日志，提取定义的宏变量和link使用的库文件名
+
+cd /d D:\tmp\vim-9.0.2103\src
+nmake -f Make_mvc.mak clean
+REM 打印编译全部日志，预定义变量，执行命令
+nmake /D /P -f Make_mvc.mak GUI=yes > nmake-gvim.log
