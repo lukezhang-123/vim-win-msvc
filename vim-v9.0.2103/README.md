@@ -132,3 +132,7 @@ HAVE_STDINT_H;FEAT_IPV6;HAVE_INET_NTOP;DYNAMIC_GETTEXT;FEAT_XPM_W32;FEAT_GUI_MSW
 
 
 kernel32.lib;advapi32.lib;shell32.lib;user32.lib;uuid.lib;ole32.lib;comctl32.lib;gdi32.lib;oleaut32.lib;oldnames.lib;comdlg32.lib;netapi32.lib;winmm.lib;version.lib;imm32.lib;winspool.lib;comctl32.lib;$(SolutionDir)vim-9.0.2103-src\src\xpm\$(LibrariesArchitecture)\lib-vc14\libXpm.lib
+
+
+test01.py  是根据makefile里obj要编译的c文件，110多个，批量生成visual studio工程配置文件，避免手动添加麻烦
+test02.py  是根据编译日志，提取定义的宏变量和link使用的库文件名
