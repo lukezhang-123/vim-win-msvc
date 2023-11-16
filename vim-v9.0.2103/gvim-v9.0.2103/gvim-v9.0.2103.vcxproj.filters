@@ -13,37 +13,429 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\libvterm">
+      <UniqueIdentifier>{56a9d831-d4f6-4d0c-b946-6fafda79b273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\xdiff">
+      <UniqueIdentifier>{a93abed5-b4d0-4eeb-b701-0adf3c082b4a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="gvim-v9.0.2103.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="gvim-v9.0.2103.cpp">
+    <ClCompile Include="..\vim-9.0.2103-src\src\xdiff\xdiffi.c">
+      <Filter>源文件\xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\xdiff\xemit.c">
+      <Filter>源文件\xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\xdiff\xhistogram.c">
+      <Filter>源文件\xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\xdiff\xpatience.c">
+      <Filter>源文件\xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\xdiff\xprepare.c">
+      <Filter>源文件\xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\xdiff\xutils.c">
+      <Filter>源文件\xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\encoding.c">
+      <Filter>源文件\libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\keyboard.c">
+      <Filter>源文件\libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\mouse.c">
+      <Filter>源文件\libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\parser.c">
+      <Filter>源文件\libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\pen.c">
+      <Filter>源文件\libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\screen.c">
+      <Filter>源文件\libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\state.c">
+      <Filter>源文件\libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\unicode.c">
+      <Filter>源文件\libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\libvterm\src\vterm.c">
+      <Filter>源文件\libvterm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\gui.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\gui_beval.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\gui_w32.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\alloc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\arabic.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\arglist.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\autocmd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\beval.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\blob.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\blowfish.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\buffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\bufwrite.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\change.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\channel.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\charset.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\cindent.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\clientserver.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\clipboard.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\cmdexpand.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\cmdhist.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\crypt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\crypt_zip.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\debugger.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\dict.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\diff.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\digraph.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\drawline.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\drawscreen.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\edit.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\eval.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\evalbuffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\evalfunc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\evalvars.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\evalwindow.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\ex_cmds.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\ex_cmds2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\ex_docmd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\ex_eval.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\ex_getln.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\fileio.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\filepath.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\findfile.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\float.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\fold.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\getchar.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\gui_xim.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\hardcopy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\hashtab.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\help.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\highlight.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\if_cscope.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\indent.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\insexpand.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\job.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\json.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\list.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\locale.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\logfile.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\map.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\mark.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\match.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\mbyte.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\memfile.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\memline.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\menu.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\message.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\misc1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\misc2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\mouse.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\move.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\normal.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\ops.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\option.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\optionstr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\os_mswin.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\os_w32exe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\os_win32.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\ObjCAMD64\pathdef.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\popupmenu.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\popupwin.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\profiler.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\quickfix.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\regexp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\register.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\screen.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\scriptfile.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\search.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\session.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\sha256.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\sign.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\sound.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\spell.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\spellfile.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\spellsuggest.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\strings.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\syntax.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\tag.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\term.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\terminal.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\testing.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\textformat.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\textobject.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\textprop.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\time.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\typval.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\ui.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\undo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\usercmd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\userfunc.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\version.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9class.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9cmds.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9compile.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9execute.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9expr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9instr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9script.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\vim9type.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\viminfo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\winclip.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\window.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="gvim-v9.0.2103.rc">
+    <ResourceCompile Include="..\vim-9.0.2103-src\src\vim.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="small.ico">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="gvim-v9.0.2103.ico">
-      <Filter>资源文件</Filter>
-    </Image>
   </ItemGroup>
 </Project>
