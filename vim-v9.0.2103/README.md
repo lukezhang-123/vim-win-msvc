@@ -92,7 +92,7 @@ fatal  error C1010: 在查找预编译头时遇到意外的文件结尾。是否
 
 ---
 
-GVim
+### GVim
 
 ObjGXAMD64 说明 gui和DIRECTX，  177  182
 
@@ -106,7 +106,7 @@ makefile中编译gvim.exe依赖的组件
 $(OUTDIR)  检查编译目录 507 OUTDIR=$(OBJDIR)  247  OBJDIR = $(OBJDIR)$(CPU)  179  OBJDIR = .\ObjC  234  CPU = AMD64  所以是 ObjCAMD64
 $(OBJ)    634 OBJ = （因为最后一行747行最后是连接符，所以包括下面的if块，755行）
 $(XDIFF_OBJ)   809  XDIFF_OBJ =
-$(GUI_OBJ)   796
+$(GUI_OBJ)   841  GUI_OBJ = $(GUI_OBJ) $(DIRECTX_OBJ) 796  GUI_OBJ =  432 DIRECTX_OBJ	=
 $(CUI_OBJ)   805 空，没有iscygpty
 $(OLE_OBJ)   761 空，因为没有OLE=yes参数
 $(OLE_IDL)   762 空
@@ -121,12 +121,14 @@ $(TERM_OBJ)   340
 $(SOUND_OBJ)  465 没定义SOUND=yes,但是编译日志里有sound.c
 $(NETBEANS_OBJ)  415 空
 $(CHANNEL_OBJ)   472 没定义CHANNEL=yes，但是编译日志有channel.c
-$(XPM_OBJ)   456 空
+$(XPM_OBJ)   456
 version.c
 version.h
+NETBEANS_OBJ  415
 
+$(SolutionDir)vim-9.0.2103-src\src\xpm\include
 
 HAVE_STDINT_H;FEAT_IPV6;HAVE_INET_NTOP;DYNAMIC_GETTEXT;FEAT_XPM_W32;FEAT_GUI_MSWIN;NDEBUG;WCWIDTH_FUNCTION=utf_uint2cells;DYNAMIC_DIRECTX;FEAT_NETBEANS_INTG;FEAT_SOUND;_WIN32_WINNT=0x0601;WIN32;FEAT_DIRECTX_COLOR_EMOJI;FEAT_HUGE;FEAT_JOB_CHANNEL;WINVER=0x0601;INLINE="";DYNAMIC_IME;SNPRINTF=vim_snprintf;HAVE_PATHDEF;FEAT_CSCOPE;DYNAMIC_ICONV;FEAT_TERMINAL;FEAT_MBYTE_IME;GET_SPECIAL_PTY_TYPE_FUNCTION=get_special_pty_type;_CRT_SECURE_NO_WARNINGS;IS_COMBINING_FUNCTION=utf_iscomposing_uint;VSNPRINTF=vim_vsnprintf;FEAT_DIRECTX
 
 
-kernel32.lib;advapi32.lib;shell32.lib;user32.lib;uuid.lib;ole32.lib;comctl32.lib;gdi32.lib;oleaut32.lib;oldnames.lib;comdlg32.lib;netapi32.lib;winmm.lib;version.lib;imm32.lib;winspool.lib;comctl32.lib
+kernel32.lib;advapi32.lib;shell32.lib;user32.lib;uuid.lib;ole32.lib;comctl32.lib;gdi32.lib;oleaut32.lib;oldnames.lib;comdlg32.lib;netapi32.lib;winmm.lib;version.lib;imm32.lib;winspool.lib;comctl32.lib;$(SolutionDir)vim-9.0.2103-src\src\xpm\$(LibrariesArchitecture)\lib-vc14\libXpm.lib

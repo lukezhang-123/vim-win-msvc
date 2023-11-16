@@ -432,6 +432,15 @@
     <ClCompile Include="..\vim-9.0.2103-src\src\window.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\gui_dwrite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\netbeans.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\xpm_w32.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\vim-9.0.2103-src\src\vim.rc">
