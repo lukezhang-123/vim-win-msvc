@@ -71,13 +71,13 @@
       <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
       <PreprocessorDefinitions>_CONSOLE;WIN32_LEAN_AND_MEAN;WINRT_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level4</WarningLevel>
-      <AdditionalOptions>%(AdditionalOptions) /permissive- /bigobj</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /permissive- /bigobj /utf-8</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>MSWIN;HAVE_STDINT_H;_WIN32_WINNT=0x0601;FEAT_CSCOPE;HAVE_INET_NTOP;DYNAMIC_IME;IS_COMBINING_FUNCTION=utf_iscomposing_uint;NDEBUG;FEAT_SOUND;FEAT_IPV6;HAVE_PATHDEF;INLINE="";FEAT_GETTEXT;GET_SPECIAL_PTY_TYPE_FUNCTION=get_special_pty_type;WIN32;WCWIDTH_FUNCTION=utf_uint2cells;WINVER=0x0601;FEAT_TERMINAL;FEAT_JOB_CHANNEL;DYNAMIC_GETTEXT;_CRT_SECURE_NO_WARNINGS;VSNPRINTF=vim_vsnprintf;SNPRINTF=vim_snprintf;FEAT_MBYTE_IME;FEAT_HUGE;DYNAMIC_ICONV</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAVE_STDINT_H;_WIN32_WINNT=0x0601;FEAT_CSCOPE;HAVE_INET_NTOP;DYNAMIC_IME;IS_COMBINING_FUNCTION=utf_iscomposing_uint;NDEBUG;FEAT_SOUND;FEAT_IPV6;HAVE_PATHDEF;INLINE="";FEAT_GETTEXT;GET_SPECIAL_PTY_TYPE_FUNCTION=get_special_pty_type;WIN32;WCWIDTH_FUNCTION=utf_uint2cells;WINVER=0x0601;FEAT_TERMINAL;FEAT_JOB_CHANNEL;DYNAMIC_GETTEXT;_CRT_SECURE_NO_WARNINGS;VSNPRINTF=vim_vsnprintf;SNPRINTF=vim_snprintf;FEAT_MBYTE_IME;FEAT_HUGE;DYNAMIC_ICONV</PreprocessorDefinitions>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vim-9.0.2103-src\src; $(SolutionDir)vim-9.0.2103-src\src\proto; $(SolutionDir)vim-9.0.2103-src\src\libvterm\include</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
       </UndefinePreprocessorDefinitions>

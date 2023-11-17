@@ -141,3 +141,8 @@ cd /d D:\tmp\vim-9.0.2103\src
 nmake -f Make_mvc.mak clean
 REM 打印编译全部日志，预定义变量，执行命令
 nmake /D /P -f Make_mvc.mak GUI=yes > nmake-gvim.log
+
+
+nmake -f Make_mvc.mak GUI=yes DEBUG=yes Mapfile=lines ANALYZE=yes ASAN=yes
+
+gvim.exe --startuptime startuptime.log  --log logging.log
