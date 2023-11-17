@@ -7979,6 +7979,8 @@ update_toolbar_size(void)
 
     w = (TOOLBAR_BUTTON_WIDTH + tbm.cxPad) * s_dpi / DEFAULT_DPI;
     h = (TOOLBAR_BUTTON_HEIGHT + tbm.cyPad) * s_dpi / DEFAULT_DPI;
+
+	h = 50;
     //TRACE("button size: %d, %d", w, h);
     SendMessage(s_toolbarhwnd, TB_SETBUTTONSIZE, 0, MAKELPARAM(w, h));
     gui.toolbar_height = h + 6;
