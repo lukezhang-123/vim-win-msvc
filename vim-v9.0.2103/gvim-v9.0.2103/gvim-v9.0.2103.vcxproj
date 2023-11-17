@@ -91,6 +91,7 @@
     <ClCompile Include="..\vim-9.0.2103-src\src\move.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\netbeans.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\normal.c" />
+    <ClCompile Include="..\vim-9.0.2103-src\src\ObjGXAMD64\pathdef.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\ops.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\option.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\optionstr.c" />
@@ -184,7 +185,6 @@
     </ClCompile>
     <ClCompile Include="..\vim-9.0.2103-src\src\sound.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\version.c" />
-    <ClCompile Include="..\vim-9.0.2103-src\src\ObjCAMD64\pathdef.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\os_w32exe.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\channel.c" />
     <ClCompile Include="..\vim-9.0.2103-src\src\job.c" />
@@ -284,11 +284,13 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)vim-9.0.2103-src\src; $(SolutionDir)vim-9.0.2103-src\src\proto; $(SolutionDir)vim-9.0.2103-src\src\libvterm\include;$(SolutionDir)vim-9.0.2103-src\src\xpm\include</AdditionalIncludeDirectories>
       <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);kernel32.lib;advapi32.lib;shell32.lib;user32.lib;uuid.lib;ole32.lib;comctl32.lib;gdi32.lib;oleaut32.lib;oldnames.lib;comdlg32.lib;netapi32.lib;winmm.lib;version.lib;imm32.lib;winspool.lib;ws2_32.lib;$(SolutionDir)vim-9.0.2103-src\src\xpm\$(LibrariesArchitecture)\lib-vc14\libXpm.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);kernel32.lib;advapi32.lib;shell32.lib;user32.lib;uuid.lib;ole32.lib;libcmt.lib;comctl32.lib;gdi32.lib;oleaut32.lib;oldnames.lib;comdlg32.lib;netapi32.lib;winmm.lib;version.lib;imm32.lib;winspool.lib;ws2_32.lib;$(SolutionDir)vim-9.0.2103-src\src\xpm\$(LibrariesArchitecture)\lib-vc14\libXpm.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

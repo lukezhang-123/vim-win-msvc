@@ -297,9 +297,6 @@
     <ClCompile Include="..\vim-9.0.2103-src\src\os_w32exe.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\vim-9.0.2103-src\src\ObjCAMD64\pathdef.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="..\vim-9.0.2103-src\src\popupmenu.c">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -439,6 +436,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\vim-9.0.2103-src\src\netbeans.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vim-9.0.2103-src\src\ObjGXAMD64\pathdef.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
