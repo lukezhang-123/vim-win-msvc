@@ -7977,10 +7977,17 @@ update_toolbar_size(void)
     //TRACE("Pad: %d, %d", tbm.cxPad, tbm.cyPad);
     //TRACE("ButtonSpacing: %d, %d", tbm.cxButtonSpacing, tbm.cyButtonSpacing);
 
-    w = (TOOLBAR_BUTTON_WIDTH + tbm.cxPad) * s_dpi / DEFAULT_DPI;
-    h = (TOOLBAR_BUTTON_HEIGHT + tbm.cyPad) * s_dpi / DEFAULT_DPI;
+	tbm.cxPad = 7;
+	tbm.cyPad = 6;
+	tbm.cxBarPad = 24;
+	tbm.cyBarPad = 0;
+	tbm.cxButtonSpacing = 0;
+	tbm.cyButtonSpacing = 0;
 
-	h = 50;
+    w = (TOOLBAR_BUTTON_WIDTH + tbm.cxPad) * s_dpi / DEFAULT_DPI;  // 25
+    h = (TOOLBAR_BUTTON_HEIGHT + tbm.cyPad) * s_dpi / DEFAULT_DPI;  // 24
+
+	//h = 50;
     //TRACE("button size: %d, %d", w, h);
     SendMessage(s_toolbarhwnd, TB_SETBUTTONSIZE, 0, MAKELPARAM(w, h));
     gui.toolbar_height = h + 6;
